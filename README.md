@@ -6,4 +6,4 @@ In this case study, I am a junior data analyst for the marketing analyst team at
 
 ### Links
 Data Source: [Divvy_tripdate](https://divvy-tripdata.s3.amazonaws.com/index.html)
-1. [Data-combining](
+1. [Data-combining](Data-combining)
