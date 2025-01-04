@@ -1,1 +1,30 @@
 I was provided the compelted year of 2023 from the company Cyclistic. The files were downloaded as csv files and uploaded into SQL. Below is my code. 
+
+"CREATE OR REPLACE TABLE `case-study-446717.202301_Divvy.2023_Results` AS
+SELECT * FROM `case-study-446717.202301_Divvy.202301`
+UNION ALL
+SELECT * FROM `case-study-446717.202301_Divvy.202302`
+UNION ALL
+SELECT * FROM `case-study-446717.202301_Divvy.202303`
+UNION ALL
+SELECT * FROM `case-study-446717.202301_Divvy.202304`
+UNION ALL
+SELECT * FROM `case-study-446717.202301_Divvy.202305`
+UNION ALL
+SELECT * FROM `case-study-446717.202301_Divvy.202310`
+UNION ALL
+SELECT * FROM `case-study-446717.202301_Divvy.202311`
+UNION ALL
+SELECT * FROM `case-study-446717.202301_Divvy.202312`;
+" 
+
+This code is missing months 6,7,8,9 due to different formats from the other files These were combined together for the summer months. 
+CREATE OR REPLACE TABLE `case-study-446717.202301_Divvy.2023_Results_summer` AS
+SELECT * FROM `case-study-446717.202301_Divvy.202306`
+UNION ALL
+SELECT * FROM `case-study-446717.202301_Divvy.202307`
+UNION ALL
+SELECT * FROM `case-study-446717.202301_Divvy.202308`
+UNION ALL
+SELECT * FROM `case-study-446717.202301_Divvy.202309`
+
