@@ -8,7 +8,7 @@ In this case study, I am a junior data analyst for the marketing analyst team at
 Data Source: [Divvy_tripdate](https://divvy-tripdata.s3.amazonaws.com/index.html)
 1. [Data-combining](Data-combining)
 2. [Data Analysis](https://github.com/BTiffee/Case-study-Bike-share/blob/161b526fbdefc122bcd339883484f7450934f46f/Data%20Analysis)
-3. [Data Visuals]()
+3. [Data Visuals](https://public.tableau.com/views/CaseStudy-BikeShare_17360392452470/Sheet2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ## Background
 In 2016, Cyclistic launched a successful bike-share o ering. Since then, the program has grown
@@ -59,5 +59,29 @@ I combined 8 CSV files as tables in the Bigquery labled "case-study-446717.20230
 
 # Data Analyze and Share 
 SQL Query: [Data Analyze](https://github.com/BTiffee/Case-study-Bike-share/blob/161b526fbdefc122bcd339883484f7450934f46f/Data%20Analysis)
+Data Visualization: [Tableau](https://public.tableau.com/views/CaseStudy-BikeShare_17360392452470/Sheet2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
 The analysis question is: How do annual members and casual riders use Cyclistic bikes differently?
+To start off the analyis I wanted to determine the bike types between users. 
+<picture><![Bike Types](https://github.com/user-attachments/assets/47fd748b-adb4-45fe-931c-27220acbe373)>
+
+I developed a hypotheses that the casual riders may be tuorist visiing chicago during tourist months. 
+<picture><![Month per Riders (1)](https://github.com/user-attachments/assets/b6653f64-4b50-4f81-a6f0-a479f74626af)>
+
+
+Than I wanted to break up the days of the week to see if there are any trends with the causal riders.
+<picture><![Average day per riders](https://github.com/user-attachments/assets/897a4091-966d-4398-8c8d-43e7158ac058)>
+
+
+
+
+I wanted to check if there is a time that causal riders are greater than member riders
+<picture><![Average per day Riders (2)](https://github.com/user-attachments/assets/c694a554-05d9-489e-813a-093a95783c73)>
+
+
+
+
+
+
+
 
