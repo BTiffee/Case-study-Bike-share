@@ -1,4 +1,71 @@
-# Data Analysis
+Data Analysis
 
 Bike types used by riders 
 '''
+SELECT
+    rideable_type,
+    member_casual,
+    COUNT(*) AS user_count
+FROM 
+    `case-study-446717.202301_Divvy.2023_Results`
+GROUP BY 
+    rideable_type, 
+    member_casual
+ORDER BY 
+    rideable_type, 
+    member_casual;
+'''
+
+Bike trips per month
+'''
+SELECT 
+    FORMAT_DATE('%B', started_at) AS month, 
+    member_casual, 
+    COUNT(*) AS user_count
+FROM 
+    `case-study-446717.202301_Divvy.2023_Results`
+GROUP BY 
+    month, 
+    member_casual
+ORDER BY 
+    month;
+'''
+
+Bike Trips per day of the week
+'''
+SELECT 
+  format_date('%A', started_at) AS day_of_week, 
+  member_casual,
+  COUNT(*) AS day_count
+FROM `case-study-446717.202301_Divvy.2023_Results`
+GROUP BY day_of_week, member_casual
+ORDER BY 
+  CASE 
+    WHEN day_of_week = 'Monday' THEN 1
+    WHEN day_of_week = 'Tuesday' THEN 2
+    WHEN day_of_week = 'Wednesday' THEN 3
+    WHEN day_of_week = 'Thursday' THEN 4
+    WHEN day_of_week = 'Friday' THEN 5
+    WHEN day_of_week = 'Saturday' THEN 6
+    WHEN day_of_week = 'Sunday' THEN 7
+  END,
+  member_casual;
+'''
+
+Bike trips per hour
+'''
+SELECT 
+    FORMAT_TIMESTAMP('%I:00 %p', TIMESTAMP(FORMAT('%04d-01-01 %02d:00:00', 2000, EXTRACT(HOUR FROM started_at)))) AS time_of_day,
+    member_casual,
+    COUNT(*) / COUNT(DISTINCT DATE(started_at)) AS average_users,
+    EXTRACT(HOUR FROM started_at) AS hour_order -- Include the hour for ordering
+FROM 
+    `case-study-446717.202301_Divvy.2023_Results`
+GROUP BY 
+    time_of_day, 
+    member_casual, 
+    hour_order
+ORDER BY 
+    hour_order;
+'''
+
