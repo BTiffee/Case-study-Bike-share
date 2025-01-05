@@ -7,7 +7,7 @@ In this case study, I am a junior data analyst for the marketing analyst team at
 ### Links
 Data Source: [Divvy_tripdate](https://divvy-tripdata.s3.amazonaws.com/index.html)
 1. [Data-combining](Data-combining)
-2. [Data Analysis]()
+2. [Data Analysis](Data Analysis)
 3. [Data Visuals]()
 
 ## Background
@@ -58,6 +58,6 @@ SQL Query: [Data Combining](Data-combining)
 I combined 8 CSV files as tables in the Bigquery labled "case-study-446717.202301_Divvy.2023_Results", the other 4 CSV files were combined in a seperate talbe due to not having the same format labled "case-study-446717.202301_Divvy.2023_Results_summer" creating 4,844,349 rows of data for the entire year. 
 
 # Data Analyze and Share 
-SQL Query: [Data Analyze]()
+SQL Query: [Data Analyze](Data Analysis)
 The analysis question is: How do annual members and casual riders use Cyclistic bikes differently?
 
