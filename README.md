@@ -72,8 +72,20 @@ I wanted to check if there is a time that causal riders are greater than member 
 
 
 
+## Conclusion 
+Based on the data and visualizations, these are my conclusions:
 
+**How do annual members and casual riders use Cyclistic bikes differently?**
 
+From the data visualizations on daily activity patterns, we can observe distinct trends in bike usage between annual members and casual riders. Annual members tend to use the bikes primarily during the workday, with spikes in usage at the start of the day, a slight decrease during midday, and another increase at the end of the workday. This suggests that members likely use the bikes for commuting. In contrast, casual riders show a steady increase in bike usage throughout the day, which indicates they may be visiting Chicago as tourists or engaging in leisure activities. This pattern is further supported by the monthly data visualization, which reveals a significant uptick in casual ridership during peak tourist months.
+
+**What motivates casual riders to purchase Cyclistic annual memberships?**
+
+To motivate casual riders to purchase memberships, I recommend Cyclistic introduce a seasonal membership tailored for peak summer months (June through September), targeting visitors during the high tourism period. Additionally, a weekend membership option offering discounted rates during weekends or off-peak hours could appeal to casual riders, encouraging them to transition to membership status.
+
+**How can Cyclistic leverage digital media to encourage casual riders to become members?**
+
+To market memberships effectively to casual users, Cyclistic could advertise in high-traffic locations such as Chicago O'Hare Airport, promoting special seasonal membership deals for summer visitors. Highlighting the convenience of using Cyclistic bikes to explore popular tourist attractions could be a strong selling point. Additionally, placing advertisements at major tourist sites and during local special events could emphasize exclusive membership rates, enticing casual riders to become members.
 
 
 
