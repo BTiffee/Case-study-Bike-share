@@ -1,6 +1,9 @@
 Data Analysis
 
-Bike types used by riders 
+Bike Types Used by Riders
+To analyze bike usage trends, I examined the ride types and categorized them by user type (member or casual). 
+I counted the number of users for each ride type to identify any patterns.
+The results were grouped and ordered by ride type and user category to provide a clear comparison.
 '''
 SELECT
     rideable_type,
@@ -16,7 +19,11 @@ ORDER BY
     member_casual;
 '''
 
-Bike trips per month
+Bike Trips per Month
+To determine which months had the highest number of users, I analyzed the data from a table containing a date column formatted as yyyy-mm-dd and time in 24-hour blocks.
+I wrote a query in the SELECT statement to format the date column as months (This is the %B, in formate date) and select the user type for each month. 
+I then counted the number of users per month. The results were grouped by month and user type and ordered chronologically by month.
+
 '''
 SELECT 
     FORMAT_DATE('%B', started_at) AS month, 
@@ -31,14 +38,18 @@ ORDER BY
     month;
 '''
 
-Bike Trips per day of the week
+Bike Trips per Day of the Week
+Building on the approach used for monthly analysis, I aimed to identify any trends in bike usage across the days of the week.
+I selected the date column and extracted the day of the week (using %A to pull the day name from the timestamp). I then counted the number of users for each day of the week. 
+To ensure the days were displayed in the correct chronological order, I assigned a numerical value to each day and used it in the ORDER BY clause.
+
 '''
 SELECT 
   format_date('%A', started_at) AS day_of_week, 
   member_casual,
   COUNT(*) AS day_count
 FROM `case-study-446717.202301_Divvy.2023_Results`
-GROUP BY day_of_week, member_casual
+GROUP BY day_of_week, member_casual 
 ORDER BY 
   CASE 
     WHEN day_of_week = 'Monday' THEN 1
@@ -52,7 +63,18 @@ ORDER BY
   member_casual;
 '''
 
-Bike trips per hour
+Bike Trips per Hour
+Continuing the analysis, I wrote a query to determine the average number of users over a 24-hour period.
+In the SELECT section, I extracted the hour (0–23) from the started_at column using the EXTRACT function. 
+Then, I used the FORMAT function to construct a timestamp string for the extracted hour. This process included the following steps:\
+%04d: Ensures the year is 4 digits (e.g., 2000).
+%02d: Ensures the hour is 2 digits (e.g., 00, 01, ..., 23).
+The rest of the string (-01-01 %02d:00:00) creates a timestamp for January 1st at the extracted hour.
+Finally, the FORMAT_TIMESTAMP('%I:00 %p', TIMESTAMP(...)) function was used to format the timestamp into a 12-hour clock string:
+%I: The hour in 12-hour format (e.g., 01, 02, ..., 12).
+%p: AM/PM marker.
+The data was grouped by time of day, user type, and hour, and then ordered chronologically by hour.
+
 '''
 SELECT 
     FORMAT_TIMESTAMP('%I:00 %p', TIMESTAMP(FORMAT('%04d-01-01 %02d:00:00', 2000, EXTRACT(HOUR FROM started_at)))) AS time_of_day,
